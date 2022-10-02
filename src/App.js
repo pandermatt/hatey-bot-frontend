@@ -8,9 +8,9 @@ function App() {
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
               <img
-                className="h-12 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt="Your Company"
+                className="h-24 w-auto"
+                src="/logo.png"
+                alt="Hatey Bot Logo"
               />
               <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Hatey Bot</h2>
             </div>
@@ -28,7 +28,7 @@ function App() {
                         name="message"
                         type="text"
                         required
-                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-fuchsia-500 focus:outline-none focus:ring-fuchsia-500 sm:text-sm"
                       />
                     </div>
                   </div>
@@ -43,7 +43,7 @@ function App() {
                         name="api-token"
                         type="password"
                         required
-                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-fuchsia-500 focus:outline-none focus:ring-fuchsia-500 sm:text-sm"
                       />
                     </div>
                   </div>
@@ -51,7 +51,7 @@ function App() {
                   <div>
                     <button
                       type="submit"
-                      className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      className="flex w-full justify-center rounded-md border border-transparent bg-fuchsia-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-fuchsia-700 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:ring-offset-2"
                     >
                       Submit
                     </button>
