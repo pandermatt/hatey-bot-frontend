@@ -65,7 +65,7 @@ function App() {
           <img
             className="absolute inset-0 h-full w-full object-cover"
             src="/bg.jpg"
-            alt="Background image for landing page"
+            alt="Background for landing page"
           />
         </div>
       </div>
