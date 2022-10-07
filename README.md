@@ -2,8 +2,11 @@
 
 ## Important Links
 
-- [Frontend](https://github.com/pandermatt/hatey-bot-frontend)
-- [Backend](https://github.com/pandermatt/hatey-bot-backend)
+
+- [Frontend GitHub](https://github.com/pandermatt/hatey-bot-frontend)
+- [Frontend hatey.monster](https://hatey.monster)
+- [Backend GitHub](https://github.com/pandermatt/hatey-bot-backend)
+- [Backend api.hatey.monster](https://api.hatey.monster)
 - [Documentation](https://www.overleaf.com/project/633592679211c2009c8bce96)
 
 
