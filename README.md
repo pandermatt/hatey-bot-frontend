@@ -1,10 +1,25 @@
-# Getting Started with Create React App
+# 🤬🤖 Hatey Bot Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Important Links
 
-## Available Scripts
 
-In the project directory, you can run:
+- [Frontend GitHub](https://github.com/pandermatt/hatey-bot-frontend)
+- [Frontend hatey.monster](https://hatey.monster)
+- [Backend GitHub](https://github.com/pandermatt/hatey-bot-backend)
+- [Backend api.hatey.monster](https://api.hatey.monster)
+- [Documentation](https://www.overleaf.com/project/633592679211c2009c8bce96)
+
+
+## Development
+
+### Setup
+
+```bash
+git clone git@github.com:pandermatt/hatey-bot-frontend.git
+cd hatey-bot-frontend
+npm install
+```
+
 
 ### `npm start`
 
@@ -39,32 +54,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
