@@ -2,26 +2,33 @@
 
 ## Important Links
 
-
-- [Frontend GitHub](https://github.com/pandermatt/hatey-bot-frontend)
-- [Frontend hatey.monster](https://hatey.monster)
+- [Website hatey.monster](https://hatey.monster)
+- [Swagger Documentation api.hatey.monster](https://api.hatey.monster)
+- [Frontend GitHub](https://github.com/pandermatt/hatey-bot-frontend) [![React app deployement](https://github.com/pandermatt/hatey-bot-frontend/actions/workflows/deploy.yml/badge.svg)](https://github.com/pandermatt/hatey-bot-frontend/actions/workflows/deploy.yml)
 - [Backend GitHub](https://github.com/pandermatt/hatey-bot-backend)
-- [Backend api.hatey.monster](https://api.hatey.monster)
-- [Documentation](https://www.overleaf.com/project/633592679211c2009c8bce96)
+- [LaTeX Documentation](https://www.overleaf.com/project/633592679211c2009c8bce96)
 
 
 ## Development
+
+The frontend is a React app. It is automatically deployed to [hatey.monster](https://hatey.monster) when a new commit is pushed to the `main` branch.
+The deployment is done by GitHub Actions and can be found in the [deploy.yml](.github/workflows/deploy.yml) file.
 
 ### Setup
 
 ```bash
 git clone git@github.com:pandermatt/hatey-bot-frontend.git
 cd hatey-bot-frontend
+
+# Install dependencies
 npm install
 ```
 
+### Run
 
-### `npm start`
+```bash
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -29,12 +36,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+```bash
+npm run build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -44,13 +50,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Contributors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
+![](https://avatars.githubusercontent.com/u/20790833?s=64)
+![](https://avatars.githubusercontent.com/u/87606238?s=64)
+![](https://avatars.githubusercontent.com/u/15248306?s=64)
