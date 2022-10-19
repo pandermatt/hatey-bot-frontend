@@ -54,6 +54,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Contributors
 
+Made with ❤️ by Pascal, Tobias and Denis
+
 ![](https://avatars.githubusercontent.com/u/20790833?s=64)
 ![](https://avatars.githubusercontent.com/u/87606238?s=64)
 ![](https://avatars.githubusercontent.com/u/15248306?s=64)
