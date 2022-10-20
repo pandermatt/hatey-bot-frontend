@@ -5,8 +5,9 @@ function App() {
   const apiUrl = 'https://api.hatey.monster'
   const [apiToken, setApiToken] = useState("")
   const [message, setMessage] = useState("")
-  const [labels, setLabels] = useState([])
+  const [results, setResults] = useState(null)
   const [errorMessage, setErrorMessage] = useState(null)
+  const toPercentage = decimal => `${(parseFloat(decimal) * 100).toFixed(0)}%`
 
   let handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,16 +21,15 @@ function App() {
       });
 
       let responseJson = await response.json();
-
-      if (response.status === 200 && responseJson.status === 'success') {
-        setLabels(responseJson.labels)
+      if (response.status === 200) {
+        setResults(responseJson)
         setErrorMessage(null)
       } else if (response.status === 401) {
-        setLabels([])
+        setResults(null)
         setErrorMessage('The API token is invalid.')
       }
       else {
-        setLabels([])
+        setResults(null)
         setErrorMessage("The API returned an error.")
       }
   };
@@ -93,13 +93,83 @@ function App() {
                   </div>
                 </form>
 
-                <div className="mt-8">
-                  {labels.map((label, index) => (
-                  <span key={index} className="inline-flex items-center rounded-full bg-green-100 px-6 py-2 text-sm font-medium text-green-800 mr-2 mb-2">
-                    {label}
+                <span className="inline-flex items-center rounded-md bg-yellow-100 px-6 py-2 text-sm font-medium text-yellow-800 mr-2 mb-2 mt-6">
+                Warning! This app is currently in a beta phase. Your data will be uploaded directly to the server. If you do not want to share your data or if you do not have the rights to the data, DO NOT use this app.
+</span>
+
+{ results && (
+  <>
+
+                {(<h2 className="text-xl mt-12">Results</h2>)}
+
+<p className="text-sm">
+
+                {(results.is_hate_speech ? 'This message was detected as hate speech' : 'This message was not detected as hate speech')}
+</p>
+               
+                {results?.problematic_words && (
+                <div className="mt-6">
+                  <h3 className="mb-2">Problematic words</h3>
+                  {results.problematic_words.map((word, index) => (
+                  <span key={index} className="inline-flex items-center rounded-full bg-purple-100 px-6 py-2 text-sm font-medium text-purple-800 mr-2 mb-2">
+                    {word}
                   </span>
                   ))}
                 </div>
+                )}
+
+                {results?.reasons && (
+                  <div className="mt-6">
+                  <h3 className="mb-2">Reasons</h3>
+                  {results.reasons.map((word, index) => (
+                  <span key={index} className="inline-flex items-center rounded-full bg-teal-100 px-6 py-2 text-sm font-medium text-teal-800 mr-2 mb-2">
+                    {word}
+                  </span>
+                  ))}
+                </div>
+                )}
+
+                {
+                 Object.entries(results?.predictions).map((item, index) => {
+                  return (
+                    <>
+                                      <div className="mt-6">
+
+                    <h3 className="mb-2">{item[0]}</h3>
+                    {Object.entries(item[1]).map((innerItem, innerIndex) => {
+                     return (
+                     <span style={{filter: `saturate(${(innerItem[1] * 500) + 50}%)`}} key={index * Object.values(item[1]).length + innerIndex} className="inline-flex items-center rounded-full bg-sky-100 px-6 py-2 text-sm font-medium text-sky-800 mr-2 mb-2">
+                     {innerItem[0]} {toPercentage(innerItem[1])}
+                   </span> 
+                     )
+                    })}
+                                      </div>
+                    </>
+                  )
+                  })
+                }
+
+                </>
+)}
+
+                  {results?.sentiment && (
+                  <div className="mt-6">
+                  <h3 className="mb-2">Sentiment</h3>
+                  <span className="inline-flex items-center rounded-full bg-emerald-100 px-6 py-2 text-sm font-medium text-emerald-800 mr-2 mb-2">
+                    Positive {toPercentage(results.sentiment.Positive)}
+                  </span>
+                  <br/>
+                  <span className="inline-flex items-center rounded-full bg-yellow-100 px-6 py-2 text-sm font-medium text-yellow-800 mr-2 mb-2">
+                    Neutral {toPercentage(results.sentiment.Neutral)}
+                  </span>
+                  <br/>
+                  <span className="inline-flex items-center rounded-full bg-red-100 px-6 py-2 text-sm font-medium text-red-800 mr-2 mb-2">
+                    Negative {toPercentage(results.sentiment.Negative)}
+                  </span>
+                </div>
+                )}
+               
+
                 {errorMessage && (
                 <div className="mt-8">
                   <span className="inline-flex items-center rounded-full bg-red-100 px-6 py-2 text-sm font-medium text-red-800">
