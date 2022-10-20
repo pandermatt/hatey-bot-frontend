@@ -9,6 +9,8 @@
 - [LaTeX Documentation](https://www.overleaf.com/project/633592679211c2009c8bce96)
 
 
+<img width="50%" src="https://user-images.githubusercontent.com/20790833/197025621-890eda34-d057-4acb-b685-ea8efaa06081.png">
+
 ## Development
 
 The frontend is a React app. It is automatically deployed to [hatey.monster](https://hatey.monster) when a new commit is pushed to the `main` branch.
